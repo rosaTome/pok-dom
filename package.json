@@ -3,12 +3,14 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://*your-username*.github.io/*your-repo-name*",
-  "author": "*your-name*",
+  "homepage": "https://github.com/rosaTome/pokedom",
+  "author": "Rosa Tome",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist"
+
   },
   "devDependencies": {
     "gh-pages": "^6.1.1",
