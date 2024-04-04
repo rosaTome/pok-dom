@@ -34,7 +34,7 @@ function createPokemonCard(pokemon: Pokemon) {
     heading.classList.add('card__heading');
 
     const text = document.createElement('p');
-    text.textContent = `Type: ${pokemon.types.join(', ')}`;
+    text.textContent = `${pokemon.name} (#${pokemon.id}) is a ${pokemon.types.join(', ')} pokemon.`;
     text.classList.add('card__text');
 
     content.appendChild(heading);
