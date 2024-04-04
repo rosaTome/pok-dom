@@ -9,6 +9,13 @@ interface Pokemon {
     sprite: string;
 }
 
+function capitalizeFirstWord(string: string): string {
+    const words = string.split(' ');
+    words[0] = words[0].charAt(0).toUpperCase() + words[0].slice(1);
+    return words.join(' ');
+};
+
+
 function createPokemonCard(pokemon: Pokemon) {
 
     const cardContainer = document.querySelector('.card-container');
@@ -30,17 +37,17 @@ function createPokemonCard(pokemon: Pokemon) {
     card.classList.add('card__content');
 
     const heading = document.createElement('h2');
-    heading.textContent = pokemon.name;
+    heading.textContent = capitalizeFirstWord(pokemon.name);
     heading.classList.add('card__heading');
 
     const text = document.createElement('p');
-    text.textContent = `${pokemon.name} (#${pokemon.id}) is a ${pokemon.types.join(', ')} pokemon.`;
-    text.classList.add('card__text');
+    text.textContent = `${capitalizeFirstWord(pokemon.name)} ${pokemon.name} (#${pokemon.id}) is a ${pokemon.types.join(', ')} pokemon.`;
+    text.classList.add('card__text', 'grey-text');
 
+    card.appendChild(content);
+    content.appendChild(image);
     content.appendChild(heading);
     content.appendChild(text);
-    content.appendChild(image);
-    card.appendChild(content);
     cardContainer.appendChild(card);
 }
 

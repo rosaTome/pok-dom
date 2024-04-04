@@ -28,6 +28,7 @@ body {
   max-width: 200px;
   border-radius: 3px;
   overflow: hidden;
+  padding: 25px;
 }
 .card-container > .card > .card__image {
   transform: scale(1.25);
@@ -44,4 +45,9 @@ body {
 }
 .card-container > .card > .card__content > .card__text {
   color: #747a8e;
+}
+
+.grey-text {
+  color: #747a8e;
+  padding-top: 20px;
 }/*# sourceMappingURL=style.css.map */
